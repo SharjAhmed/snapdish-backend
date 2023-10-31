@@ -24,6 +24,10 @@ class ProfileList(APIView):
 
 
 class ProfileDetail(generics.RetrieveUpdateDestroyAPIView):
+    """
+    Added django generics RetrieveUpdateDestroyAPIView to allow users 
+    to also delete their profile if logged in.
+    """
     serializer_class = ProfileSerializer
     permission_classes = [IsOwnerOrReadOnly]
 
