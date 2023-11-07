@@ -63,13 +63,13 @@ REST_AUTH_SERIALIZERS = {
 SECRET_KEY = os.getenv('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = 'DEV' in os.environ
 
 ALLOWED_HOSTS = [
     os.environ.get('ALLOWED_HOST'),
     '8000-sharjahmed-snapdishback-504m3seeln4.ws-eu105.gitpod.io',
     'localhost',
-    'https://snapdish-backend-eb95a816e88d.herokuapp.com/'
+    'snapdish-backend-eb95a816e88d.herokuapp.com'
 ]
 
 
