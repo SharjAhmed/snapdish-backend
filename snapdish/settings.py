@@ -68,6 +68,7 @@ DEBUG = 'DEV' in os.environ
 ALLOWED_HOSTS = [
     os.environ.get('ALLOWED_HOST'),
     '8000-sharjahmed-snapdishback-504m3seeln4.ws-eu105.gitpod.io',
+    '3000-sharjahmed-snapdishfron-cc2v5956ybe.ws-eu106.gitpod.io',
     'localhost',
     'snapdish-backend-eb95a816e88d.herokuapp.com'
 ]
