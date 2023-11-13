@@ -28,9 +28,9 @@ class PostSerializer(serializers.ModelSerializer):
                 'Sorry! The image width is larger than 4096px!'
                 'Please attach an image smaller than 4096px x 4096px'
             )
-        if value.image.length > 4096:
+        if value.image.height > 4096:
             raise serializers.ValidationError(
-                'Sorry! The image length is larger than 4096px!'
+                'Sorry! The image height is larger than 4096px!'
                 'Please attach an image smaller than 4096px x 4096px'
             )
         return value
