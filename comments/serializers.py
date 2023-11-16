@@ -10,8 +10,8 @@ class CommentSerializer(serializers.ModelSerializer):
     profile_image = serializers.ReadOnlyField(
         source='owner.profile.image.url'
     )
-    created_at = serializers.SerializerMethodField
-    updated_at = serializers.SerializerMethodField
+    created_at = serializers.SerializerMethodField()
+    updated_at = serializers.SerializerMethodField()
 
     def get_is_owner(self, obj):
         request = self.context['request']
