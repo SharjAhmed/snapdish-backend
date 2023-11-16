@@ -20,7 +20,7 @@ class CommentSerializer(serializers.ModelSerializer):
     def get_created_at(self, obj):
         return naturaltime(obj.created_at)
 
-    def get_created_at(self, obj):  
+    def get_updated_at(self, obj):  
         return naturaltime(obj.updated_at)
     
     class Meta:
@@ -40,3 +40,16 @@ class CommentSerializer(serializers.ModelSerializer):
 
 class CommentDetailSerializer(serializers.ModelSerializer):
     post = serializers.ReadOnlyField(source='post.id')
+
+    class Meta:
+        model = Comment
+        fields = [
+            'id',
+            'owner',
+            'profile_id',
+            'profile_image',
+            'post',
+            'created_at',
+            'updated_at',
+            'content'
+        ]
