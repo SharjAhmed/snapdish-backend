@@ -10,6 +10,7 @@ class Comment(models.Model):
     """
     owner = models.ForeignKey(User, on_delete=models.CASCADE)
     profile_id = models.ForeignKey(Profile, on_delete=models.CASCADE, null=True, blank=True)
+    profile_image = models.ImageField(upload_to='images/', null=True, blank=True)
     post = models.ForeignKey(Post, on_delete=models.CASCADE)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
