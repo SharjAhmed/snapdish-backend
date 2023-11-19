@@ -67,7 +67,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     os.environ.get('ALLOWED_HOST'),
-    '8000-sharjahmed-snapdishback-504m3seeln4.ws-eu105.gitpod.io',
+    '8000-sharjahmed-snapdishback-m9qs73dhmlg.ws-eu106.gitpod.io',
     '3000-sharjahmed-snapdishfron-vsaakek5r6c.ws-eu106.gitpod.io',
     'localhost',
     'snapdish-backend-eb95a816e88d.herokuapp.com'
@@ -101,6 +101,7 @@ INSTALLED_APPS = [
     'comments',
     'likes',
     'followers',
+    'comments_likes'
 ]
 
 SITE_ID = 1
