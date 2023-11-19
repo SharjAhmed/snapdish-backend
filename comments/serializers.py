@@ -26,13 +26,13 @@ class CommentSerializer(serializers.ModelSerializer):
         fields = [
             'id',
             'owner',
-            'is_owner',
-            'profile_id',
-            'profile_image',
+            'content',
             'post',
             'created_at',
             'updated_at',
-            'content'
+            'is_owner',
+            'profile_id',
+            'profile_image',
         ]
 
 

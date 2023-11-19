@@ -13,6 +13,7 @@ class CommentList(generics.ListCreateAPIView):
     filterset_fields = ['post']
 
     def perform_create(self, serializer):
+        print("Current user:", self.request.user)
         serializer.save(owner=self.request.user)
 
 
