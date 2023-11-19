@@ -6,8 +6,8 @@ from .models import Comment
 class CommentSerializer(serializers.ModelSerializer):
     owner = serializers.ReadOnlyField(source='owner.username')
     is_owner = serializers.SerializerMethodField()
-    profile_id = serializers.ReadOnlyField(source='profile.id')
-    profile_image = serializers.ReadOnlyField(source='profile.image.url')
+    profile_id = serializers.ReadOnlyField(source='owner.profile.id')
+    profile_image = serializers.ReadOnlyField(source='owner.profile.image.url')
     created_at = serializers.SerializerMethodField()
     updated_at = serializers.SerializerMethodField()
 
@@ -36,18 +36,5 @@ class CommentSerializer(serializers.ModelSerializer):
         ]
 
 
-class CommentDetailSerializer(serializers.ModelSerializer):
+class CommentDetailSerializer(CommentSerializer):
     post = serializers.ReadOnlyField(source='post.id')
-
-    class Meta:
-        model = Comment
-        fields = [
-            'id',
-            'owner',
-            'profile_id',
-            'profile_image',
-            'post',
-            'created_at',
-            'updated_at',
-            'content'
-        ]
