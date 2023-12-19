@@ -69,9 +69,12 @@ ALLOWED_HOSTS = [
     os.environ.get('ALLOWED_HOST'),
     '8000-sharjahmed-snapdishback-m9qs73dhmlg.ws-eu106.gitpod.io',
     '3000-sharjahmed-snapdishfron-vsaakek5r6c.ws-eu106.gitpod.io',
-    'localhost',
+    'localhost:3000',
+    'http://localhost:3000',
     'snapdish-backend-eb95a816e88d.herokuapp.com'
 ]
+
+
 
 
 # Application definition
